@@ -2,7 +2,7 @@
 
 Risky patterns in the API and indexer are detected automatically by a
 combination of TypeScript strict-mode type-checking and three custom ESLint
-rules that ship as the `@stellar-analytics/eslint-plugin` workspace package.
+rules that ship as the `@stroop/eslint-plugin` workspace package.
 
 ---
 
@@ -24,7 +24,7 @@ rules that ship as the `@stellar-analytics/eslint-plugin` workspace package.
 ## Custom ESLint rules
 
 All three rules live in `tools/eslint-rules/src/` and are published as the
-`@stellar-analytics/eslint-plugin` pnpm workspace package.
+`@stroop/eslint-plugin` pnpm workspace package.
 
 ### `no-raw-sql-in-resolver`
 
@@ -156,8 +156,8 @@ pnpm lint
 pnpm lint:api:fix
 
 # Build and test the custom ESLint plugin
-pnpm --filter @stellar-analytics/eslint-plugin build
-pnpm --filter @stellar-analytics/eslint-plugin test
+pnpm --filter @stroop/eslint-plugin build
+pnpm --filter @stroop/eslint-plugin test
 ```
 
 ---

@@ -1,6 +1,6 @@
 # Contributor Issue Taxonomy
 
-Guide for filing, labelling, and triaging GitHub issues in the Stellar Analytics Dashboard monorepo.
+Guide for filing, labelling, and triaging GitHub issues in the Stroop monorepo.
 
 <!-- taxonomy-labels: needs-triage, priority: critical, priority: high, priority: medium, priority: low, wontfix, Stellar Wave -->
 <!-- taxonomy-areas: frontend, api, indexer, shared, docs, devops / ci -->

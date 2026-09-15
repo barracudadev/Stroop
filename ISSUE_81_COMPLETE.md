@@ -248,15 +248,15 @@ Trigger: Nightly schedule on main
 **Updated: `package.json`**
 ```json
 "scripts": {
-  "test": "pnpm --filter @stellar-analytics/e2e test",
-  "test:e2e": "pnpm --filter @stellar-analytics/e2e test",
-  "test:e2e:ui": "pnpm --filter @stellar-analytics/e2e test:ui",
-  "test:e2e:debug": "pnpm --filter @stellar-analytics/e2e test:debug",
-  "test:e2e:headed": "pnpm --filter @stellar-analytics/e2e test:headed",
-  "test:e2e:chrome": "pnpm --filter @stellar-analytics/e2e test:chrome",
-  "test:e2e:firefox": "pnpm --filter @stellar-analytics/e2e test:firefox",
-  "test:e2e:webkit": "pnpm --filter @stellar-analytics/e2e test:webkit",
-  "test:e2e:codegen": "pnpm --filter @stellar-analytics/e2e codegen"
+  "test": "pnpm --filter @stroop/e2e test",
+  "test:e2e": "pnpm --filter @stroop/e2e test",
+  "test:e2e:ui": "pnpm --filter @stroop/e2e test:ui",
+  "test:e2e:debug": "pnpm --filter @stroop/e2e test:debug",
+  "test:e2e:headed": "pnpm --filter @stroop/e2e test:headed",
+  "test:e2e:chrome": "pnpm --filter @stroop/e2e test:chrome",
+  "test:e2e:firefox": "pnpm --filter @stroop/e2e test:firefox",
+  "test:e2e:webkit": "pnpm --filter @stroop/e2e test:webkit",
+  "test:e2e:codegen": "pnpm --filter @stroop/e2e codegen"
 }
 ```
 
@@ -275,7 +275,7 @@ packages:
 ### 1. Install
 ```bash
 pnpm install
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 ```
 
 ### 2. Run Tests
@@ -291,7 +291,7 @@ pnpm test:e2e:debug    # Debug mode
 
 ### 3. View Results
 ```bash
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ## Test Statistics
@@ -440,7 +440,7 @@ GETTING_STARTED.md          ← Start here!
 ```bash
 # Installation
 pnpm install
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 
 # Running Tests
 pnpm test:e2e              # Run all tests (headless)
@@ -453,7 +453,7 @@ pnpm test:e2e:webkit       # WebKit only
 pnpm test:e2e:codegen      # Generate test code
 
 # Viewing Results
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 
 # Specific Tests
 pnpm test:e2e -- auth.spec.ts                    # Run file

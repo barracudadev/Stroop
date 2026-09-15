@@ -3,7 +3,7 @@
 ## Project Structure
 
 ```
-stellar-analytics-dashboard/
+Stroop/
 ├── .github/
 │   └── workflows/
 │       ├── e2e-tests.yml                    # Main E2E test workflow

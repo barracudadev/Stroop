@@ -1,7 +1,7 @@
 # API Examples — Dashboard, Account & Network Analytics
 
 This document provides realistic, ready-to-run GraphQL examples for the three
-main families of endpoints exposed by the Stellar Analytics API
+main families of endpoints exposed by the Stroop API
 (`http://localhost:4000/graphql`):
 
 1. **Dashboard** — the widgets that power the public dashboard (network stats,

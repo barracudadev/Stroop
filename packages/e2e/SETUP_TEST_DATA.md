@@ -11,13 +11,13 @@ pnpm dev
 
 2. **Database migrated**
 ```bash
-pnpm --filter @stellar-analytics/api exec npm run migrate
+pnpm --filter @stroop/api exec npm run migrate
 ```
 
 3. **Test user created**
 ```bash
 # Create test user via GraphQL mutation
-pnpm --filter @stellar-analytics/api exec npm run seed-test-data
+pnpm --filter @stroop/api exec npm run seed-test-data
 ```
 
 ## Creating Test Users
@@ -59,7 +59,7 @@ VALUES (
 
 ```bash
 # Create seed file: packages/api/src/scripts/seed-test-data.ts
-pnpm --filter @stellar-analytics/api exec ts-node src/scripts/seed-test-data.ts
+pnpm --filter @stroop/api exec ts-node src/scripts/seed-test-data.ts
 ```
 
 ## Sample Test Data
@@ -112,16 +112,16 @@ mutation {
 ### Clear all test data
 ```bash
 # Via API
-pnpm --filter @stellar-analytics/api exec npm run reset-db
+pnpm --filter @stroop/api exec npm run reset-db
 
 # Via direct database query
-psql -d stellar_analytics_dev -c "TRUNCATE TABLE transactions, ledgers, accounts CASCADE;"
+psql -d stroop_dev -c "TRUNCATE TABLE transactions, ledgers, accounts CASCADE;"
 ```
 
 ### Restore to initial state
 ```bash
 # Re-run migrations
-pnpm --filter @stellar-analytics/api exec npm run migrate
+pnpm --filter @stroop/api exec npm run migrate
 ```
 
 ## Authentication Setup
@@ -162,14 +162,14 @@ BASE_URL=http://localhost:5173
 TEST_USER_EMAIL=test@example.com
 TEST_USER_PASSWORD=TestPassword123!
 API_URL=http://localhost:4000/graphql
-DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stellar_analytics_dev
+DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stroop_dev
 ```
 
 ## Debugging Database Issues
 
 ### Check database connection
 ```bash
-psql -d stellar_analytics_dev -U stellar_user
+psql -d stroop_dev -U stellar_user
 ```
 
 ### View tables

@@ -1,6 +1,6 @@
 # Architecture Overview
 
-System architecture and canonical package paths for the Stellar Analytics Dashboard monorepo.
+System architecture and canonical package paths for the Stroop monorepo.
 
 **Workspace authority:** `pnpm-workspace.yaml`
 
@@ -12,13 +12,13 @@ The monorepo uses a mixed layout. Always use these paths when editing code or do
 
 | Package | Canonical path | pnpm filter | Notes |
 |---------|---------------|-------------|-------|
-| Indexer (runtime) | `indexer/` | `@stellar-analytics/indexer` | Active source and `.env` |
+| Indexer (runtime) | `indexer/` | `@stroop/indexer` | Active source and `.env` |
 | Indexer migrations | `packages/indexer/migrations/` | — | SQL migrations (not in workspace) |
-| GraphQL API | `packages/api/` | `@stellar-analytics/api` | |
-| Frontend (dev) | `frontend/` | `@stellar-analytics/frontend` | Vite dev server |
-| Shared types | `shared/` | `@stellar-analytics/shared` | |
-| E2E tests | `packages/e2e/` | `@stellar-analytics/e2e` | Playwright |
-| ESLint rules | `tools/eslint-rules/` | `@stellar-analytics/eslint-plugin` | |
+| GraphQL API | `packages/api/` | `@stroop/api` | |
+| Frontend (dev) | `frontend/` | `@stroop/frontend` | Vite dev server |
+| Shared types | `shared/` | `@stroop/shared` | |
+| E2E tests | `packages/e2e/` | `@stroop/e2e` | Playwright |
+| ESLint rules | `tools/eslint-rules/` | `@stroop/eslint-plugin` | |
 
 **Legacy duplicates (do not use for new work):**
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Stellar Analytics Dashboard uses **Zustand** for global client-side state management. Zustand provides:
+The Stroop uses **Zustand** for global client-side state management. Zustand provides:
 
 - Minimal boilerplate with TypeScript support out of the box
 - Built-in `persist` middleware for localStorage persistence with versioning and migration

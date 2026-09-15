@@ -1,6 +1,6 @@
 # Supported Node.js Versions
 
-This document is the single source of truth for Node.js and pnpm version requirements across the Stellar Analytics Dashboard monorepo.
+This document is the single source of truth for Node.js and pnpm version requirements across the Stroop monorepo.
 
 <!-- node-min-version: 18 -->
 <!-- node-recommended-version: 20 -->

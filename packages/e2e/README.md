@@ -36,7 +36,7 @@ pnpm test:e2e:ui
 pnpm test:e2e:debug -- auth.spec.ts
 
 # View test report
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 
 # Record new test
 pnpm test:e2e:codegen
@@ -105,7 +105,7 @@ pnpm test:e2e:codegen
 
 ### View failed test videos
 ```bash
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ## CI Integration

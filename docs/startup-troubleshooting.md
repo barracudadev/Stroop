@@ -5,7 +5,7 @@
 **Next Review:** 2026-11-27  
 **Owner:** Platform Engineering Team
 
-Solutions for the most common Docker, Node, and database startup problems in the Stellar Analytics Dashboard monorepo.
+Solutions for the most common Docker, Node, and database startup problems in the Stroop monorepo.
 
 ---
 
@@ -67,14 +67,14 @@ docker compose logs redis
 
 ```bash
 # Check the healthcheck directly
-docker compose exec postgres pg_isready -U stellar -d stellar_analytics
+docker compose exec postgres pg_isready -U stellar -d stroop
 ```
 
 If that returns `accepting connections`, the healthcheck just needs more retries. Bump the compose healthcheck:
 
 ```yaml
 healthcheck:
-  test: ["CMD-SHELL", "pg_isready -U stellar -d stellar_analytics"]
+  test: ["CMD-SHELL", "pg_isready -U stellar -d stroop"]
   interval: 10s
   timeout: 5s
   retries: 10        # ← was 5, increase if startup is slow
@@ -123,7 +123,7 @@ Common causes:
 
 ### `pnpm install` fails with `ERR_PNPM_WORKSPACE_PKG_NOT_FOUND`
 
-**Symptom**: Package resolution errors for `@stellar-analytics/shared` or other workspace packages.
+**Symptom**: Package resolution errors for `@stroop/shared` or other workspace packages.
 
 **Fix**:
 
@@ -138,14 +138,14 @@ pnpm install --frozen-lockfile
 
 ---
 
-### `Cannot find module '@stellar-analytics/shared'` at runtime
+### `Cannot find module '@stroop/shared'` at runtime
 
 The shared package must be built before dependant packages start.
 
 ```bash
-pnpm --filter @stellar-analytics/shared build
-pnpm --filter @stellar-analytics/indexer build
-pnpm --filter @stellar-analytics/api build
+pnpm --filter @stroop/shared build
+pnpm --filter @stroop/indexer build
+pnpm --filter @stroop/api build
 ```
 
 Or run all builds in dependency order:
@@ -209,7 +209,7 @@ cp packages/api/.env.example packages/api/.env
 Minimum required values:
 
 ```dotenv
-DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stellar_analytics_dev
+DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stroop_dev
 REDIS_URL=redis://localhost:6379
 JWT_SECRET=change_me_to_a_random_32_char_string
 ```
@@ -298,17 +298,17 @@ cp packages/indexer/.env.example packages/indexer/.env
 pnpm db:migrate
 
 # Check for errors
-pnpm --filter @stellar-analytics/indexer db:migrate
+pnpm --filter @stroop/indexer db:migrate
 ```
 
 If migrations fail because the database doesn't exist:
 
 ```bash
 # Create the database (outside Docker)
-createdb -U stellar_user stellar_analytics_dev
+createdb -U stellar_user stroop_dev
 
 # Or inside the running Postgres container
-docker compose exec postgres createdb -U stellar stellar_analytics
+docker compose exec postgres createdb -U stellar stroop
 ```
 
 ---
@@ -333,7 +333,7 @@ Get-NetTCPConnection -LocalPort 3001  # Windows
 lsof -i :5173 -t | xargs kill -9
 
 # Or choose a different port
-VITE_PORT=5174 pnpm --filter @stellar-analytics/frontend dev
+VITE_PORT=5174 pnpm --filter @stroop/frontend dev
 ```
 
 ---
@@ -360,7 +360,7 @@ The PostCSS/Tailwind pipeline requires a build step in production. In developmen
 
 ```bash
 # Restart the dev server with a clean cache
-pnpm --filter @stellar-analytics/frontend exec vite --force
+pnpm --filter @stroop/frontend exec vite --force
 ```
 
 ---
@@ -376,7 +376,7 @@ pnpm --filter @stellar-analytics/frontend exec vite --force
 echo $DATABASE_URL
 
 # Run with explicit connection string
-DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stellar_analytics_dev pnpm db:migrate
+DATABASE_URL=postgresql://stellar_user:stellar_password@localhost:5432/stroop_dev pnpm db:migrate
 ```
 
 ---
@@ -440,7 +440,7 @@ rm -rf node_modules
 pnpm install
 
 # 4. Build shared package first
-pnpm --filter @stellar-analytics/shared build
+pnpm --filter @stroop/shared build
 
 # 5. Start infrastructure
 docker compose -f docker-compose.dev.yml up -d

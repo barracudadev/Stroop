@@ -22,7 +22,7 @@ The E2E tests are in the `packages/e2e` directory as a separate package.
 pnpm install
 
 # Install Playwright browsers (one-time setup)
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 ```
 
 ### Running Tests
@@ -258,7 +258,7 @@ After running tests, open the HTML report:
 
 ```bash
 # Web-based HTML report
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 
 # Or access directly
 open packages/e2e/playwright-report/index.html
@@ -293,7 +293,7 @@ pnpm test:e2e:codegen
 ### Screenshots and Videos
 ```bash
 # View recordings of failed tests
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ## Best Practices

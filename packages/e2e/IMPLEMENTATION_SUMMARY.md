@@ -159,7 +159,7 @@ packages/e2e/
 ### Installation
 ```bash
 pnpm install
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 ```
 
 ### Run Tests
@@ -174,7 +174,7 @@ pnpm test:e2e     # Headless
 
 ### View Results
 ```bash
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ## 📊 Test Coverage
@@ -340,7 +340,7 @@ pnpm test:e2e:codegen
 
 ### View Test Report
 ```bash
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ## 🤝 Contributing
@@ -408,13 +408,13 @@ After implementing E2E tests:
 
 ## ✨ What's Next?
 
-1. **Install Playwright**: `pnpm install && pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps`
+1. **Install Playwright**: `pnpm install && pnpm --filter @stroop/e2e exec playwright install --with-deps`
 
 2. **Start Services**: `pnpm dev`
 
 3. **Run Tests**: `pnpm test:e2e:ui` or `pnpm test:e2e`
 
-4. **View Reports**: `pnpm --filter @stellar-analytics/e2e exec playwright show-report`
+4. **View Reports**: `pnpm --filter @stroop/e2e exec playwright show-report`
 
 5. **Push to GitHub** - CI will automatically run E2E tests on PR!
 

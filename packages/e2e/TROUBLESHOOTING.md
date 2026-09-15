@@ -131,16 +131,16 @@ CI=true pnpm test:e2e:debug
 **Solutions**:
 ```bash
 # Create test database
-createdb stellar_analytics_test
+createdb stroop_test
 
 # Run migrations
-pnpm --filter @stellar-analytics/api exec npm run migrate
+pnpm --filter @stroop/api exec npm run migrate
 
 # Seed test data
-pnpm --filter @stellar-analytics/api exec npm run seed-test-data
+pnpm --filter @stroop/api exec npm run seed-test-data
 
 # Check connection
-psql -d stellar_analytics_test -U stellar_user
+psql -d stroop_test -U stellar_user
 ```
 
 ### 7. Port Already in Use
@@ -250,7 +250,7 @@ PLAYWRIGHT_DISABLE_SCREENSHOT=1 pnpm test:e2e
 ### Chrome Tests Fail
 ```bash
 # Reinstall Chrome
-pnpm --filter @stellar-analytics/e2e exec playwright install chromium
+pnpm --filter @stroop/e2e exec playwright install chromium
 
 # Run only Chrome
 pnpm test:e2e:chrome
@@ -262,7 +262,7 @@ CHROMIUM_DEBUG=1 pnpm test:e2e:chrome
 ### Firefox Tests Fail
 ```bash
 # Reinstall Firefox
-pnpm --filter @stellar-analytics/e2e exec playwright install firefox
+pnpm --filter @stroop/e2e exec playwright install firefox
 
 # Firefox requires special handling
 test.use({ ...devices['Desktop Firefox'] });
@@ -271,7 +271,7 @@ test.use({ ...devices['Desktop Firefox'] });
 ### Safari Tests Fail
 ```bash
 # Reinstall WebKit
-pnpm --filter @stellar-analytics/e2e exec playwright install webkit
+pnpm --filter @stroop/e2e exec playwright install webkit
 
 # WebKit has limited features
 // Some APIs not available in WebKit
@@ -328,7 +328,7 @@ env:
 
 4. **View reports**:
    ```bash
-   pnpm --filter @stellar-analytics/e2e exec playwright show-report
+   pnpm --filter @stroop/e2e exec playwright show-report
    ```
 
 5. **Check GitHub Issues**:

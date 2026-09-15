@@ -1,7 +1,7 @@
 # Loading Skeletons Implementation (Issue #228)
 
 ## Summary
-Implemented reusable loading skeleton components to improve perceived performance while data is being fetched across the stellar-analytics-dashboard.
+Implemented reusable loading skeleton components to improve perceived performance while data is being fetched across the Stroop.
 
 ## Changes Made
 

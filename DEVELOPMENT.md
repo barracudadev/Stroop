@@ -1,6 +1,6 @@
 # Local Development Guide
 
-Everything a new developer needs to run the Stellar Analytics Dashboard on their machine — no tribal knowledge required.
+Everything a new developer needs to run the Stroop on their machine — no tribal knowledge required.
 
 ---
 
@@ -44,7 +44,7 @@ npm install -g pnpm@9
 ```bash
 # 1. Clone
 git clone <repo-url>
-cd stellar-analytics-dashboard
+cd Stroop
 
 # 2. Install all workspace dependencies
 pnpm install
@@ -150,7 +150,7 @@ directly without setting any env var.
 
 ```bash
 # From repo root
-pnpm --filter @stellar-analytics/indexer test
+pnpm --filter @stroop/indexer test
 
 # Or from the indexer folder
 cd indexer
@@ -241,13 +241,13 @@ pnpm test:ci
 
 ```bash
 # Indexer unit tests (includes offline mock tests — no network required)
-pnpm --filter @stellar-analytics/indexer test
+pnpm --filter @stroop/indexer test
 
 # API unit tests
-pnpm --filter @stellar-analytics/api test
+pnpm --filter @stroop/api test
 
 # Frontend unit tests (Vitest)
-pnpm --filter @stellar-analytics/frontend test:ci
+pnpm --filter @stroop/frontend test:ci
 ```
 
 ### E2E tests (requires running stack)

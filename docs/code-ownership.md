@@ -2,7 +2,7 @@
 
 This document defines which teams are responsible for each service area in the monorepo. It is the human-readable companion to [`.github/CODEOWNERS`](../.github/CODEOWNERS), which GitHub uses to automatically request reviews on pull requests.
 
-When a PR touches files in multiple areas, all matching teams are requested simultaneously. If owners disagree on an approach, escalate to `@stellar-analytics/maintainers` for a final decision.
+When a PR touches files in multiple areas, all matching teams are requested simultaneously. If owners disagree on an approach, escalate to `@stroop/maintainers` for a final decision.
 
 ---
 
@@ -10,12 +10,12 @@ When a PR touches files in multiple areas, all matching teams are requested simu
 
 | Team | GitHub handle | Primary responsibilities |
 |------|--------------|--------------------------|
-| `@stellar-analytics/maintainers` | `@stellar-analytics/maintainers` | Repo-level config, shared package, documentation, cross-cutting architecture decisions |
-| `@stellar-analytics/indexer-team` | `@stellar-analytics/indexer-team` | Data ingestion, Horizon polling, backfill logic, database schema and migrations |
-| `@stellar-analytics/api-team` | `@stellar-analytics/api-team` | GraphQL API, resolvers, DataLoader, Redis caching, rate limiting |
-| `@stellar-analytics/frontend-team` | `@stellar-analytics/frontend-team` | React dashboard, Apollo Client, i18n, theming, Vitest unit tests |
-| `@stellar-analytics/qa-team` | `@stellar-analytics/qa-team` | Playwright E2E suite, cross-browser config, test data fixtures |
-| `@stellar-analytics/platform-infra` | `@stellar-analytics/platform-infra` | CI/CD workflows, Docker Compose, backup scripts, infrastructure config |
+| `@stroop/maintainers` | `@stroop/maintainers` | Repo-level config, shared package, documentation, cross-cutting architecture decisions |
+| `@stroop/indexer-team` | `@stroop/indexer-team` | Data ingestion, Horizon polling, backfill logic, database schema and migrations |
+| `@stroop/api-team` | `@stroop/api-team` | GraphQL API, resolvers, DataLoader, Redis caching, rate limiting |
+| `@stroop/frontend-team` | `@stroop/frontend-team` | React dashboard, Apollo Client, i18n, theming, Vitest unit tests |
+| `@stroop/qa-team` | `@stroop/qa-team` | Playwright E2E suite, cross-browser config, test data fixtures |
+| `@stroop/platform-infra` | `@stroop/platform-infra` | CI/CD workflows, Docker Compose, backup scripts, infrastructure config |
 
 ---
 
@@ -23,7 +23,7 @@ When a PR touches files in multiple areas, all matching teams are requested simu
 
 ### Shared (`shared/`, `packages/shared/`)
 
-**Owner:** `@stellar-analytics/maintainers`
+**Owner:** `@stroop/maintainers`
 
 Contains TypeScript types, network configuration, and utility functions used by every other package. A change here can break any consumer in the monorepo, so reviews require extra care.
 
@@ -42,8 +42,8 @@ Contains TypeScript types, network configuration, and utility functions used by 
 
 ### Indexer (`indexer/`, `packages/indexer/`)
 
-**Owner:** `@stellar-analytics/indexer-team`  
-**Co-owner (database migrations):** `@stellar-analytics/platform-infra`
+**Owner:** `@stroop/indexer-team`  
+**Co-owner (database migrations):** `@stroop/platform-infra`
 
 Polls the Stellar Horizon API, normalises ledger / transaction / operation / payment records, writes them to PostgreSQL in bulk, and broadcasts real-time updates over WebSocket.
 
@@ -65,7 +65,7 @@ Polls the Stellar Horizon API, normalises ledger / transaction / operation / pay
 
 ### API (`api/`, `packages/api/`)
 
-**Owner:** `@stellar-analytics/api-team`
+**Owner:** `@stroop/api-team`
 
 Express + GraphQL server. Serves dashboard data from PostgreSQL, applies Redis caching, enforces rate limits, and exposes DataLoader-batched resolvers. The `api/` directory is the root-level service; `packages/api/` is the monorepo-workspace version — both are owned by this team.
 
@@ -88,7 +88,7 @@ Express + GraphQL server. Serves dashboard data from PostgreSQL, applies Redis c
 
 ### Frontend (`frontend/`, `packages/frontend/`)
 
-**Owner:** `@stellar-analytics/frontend-team`
+**Owner:** `@stroop/frontend-team`
 
 React 18 + Vite dashboard. Uses Apollo Client for GraphQL data fetching, i18next for localisation, and a custom theme context for dark/light mode.
 
@@ -103,15 +103,15 @@ React 18 + Vite dashboard. Uses Apollo Client for GraphQL data fetching, i18next
 - New components have a corresponding unit test using Vitest + Testing Library.
 - All user-facing strings are added to every locale file in the same PR — no locale can be left behind.
 - Interactive elements have ARIA labels; colour contrast meets WCAG 2.1 AA.
-- `pnpm --filter @stellar-analytics/frontend build` completes with zero TypeScript errors.
+- `pnpm --filter @stroop/frontend build` completes with zero TypeScript errors.
 - New GraphQL queries are co-located in `packages/frontend/src/graphql/queries.ts` and validated against the live schema.
 
 ---
 
 ### E2E Tests (`packages/e2e/`)
 
-**Owner:** `@stellar-analytics/qa-team`  
-**Co-owner:** `@stellar-analytics/frontend-team`
+**Owner:** `@stroop/qa-team`  
+**Co-owner:** `@stroop/frontend-team`
 
 Playwright test suite covering all major user workflows across Chromium, Firefox, WebKit, and mobile viewports. The QA team owns test infrastructure and stability; the frontend team co-owns because E2E tests are tightly coupled to UI behaviour.
 
@@ -125,7 +125,7 @@ Playwright test suite covering all major user workflows across Chromium, Firefox
 **Acceptance criteria:**
 - Every new user-facing feature has a corresponding E2E test in `packages/e2e/tests/` before the PR is merged.
 - Tests use shared helpers from `tests/helpers.ts` rather than duplicating selectors or setup logic.
-- All tests pass locally with `pnpm --filter @stellar-analytics/e2e test` before a PR is opened.
+- All tests pass locally with `pnpm --filter @stroop/e2e test` before a PR is opened.
 - Flaky tests are either fixed or quarantined with a linked tracking issue — no untracked flakes may be merged.
 - New visual regression baselines are committed alongside the test that introduces them.
 
@@ -133,8 +133,8 @@ Playwright test suite covering all major user workflows across Chromium, Firefox
 
 ### Documentation (`docs/`, `README.md`, `CONTRIBUTING.md`, root `*.md`)
 
-**Owner:** `@stellar-analytics/maintainers`  
-**Co-owner (CACHING.md):** `@stellar-analytics/api-team`
+**Owner:** `@stroop/maintainers`  
+**Co-owner (CACHING.md):** `@stroop/api-team`
 
 All markdown guides, runbooks, and process documents. Documentation is a first-class part of the codebase — outdated or missing docs are treated as bugs.
 
@@ -154,8 +154,8 @@ All markdown guides, runbooks, and process documents. Documentation is a first-c
 
 ### Infrastructure & CI/CD (`.github/workflows/`, `scripts/`, `docker-compose*.yml`, `tools/`)
 
-**Owner:** `@stellar-analytics/platform-infra`  
-**Co-owner (workflows):** `@stellar-analytics/maintainers`
+**Owner:** `@stroop/platform-infra`  
+**Co-owner (workflows):** `@stroop/maintainers`
 
 GitHub Actions pipelines, Docker Compose definitions, backup scripts, custom ESLint tooling, and deployment utilities.
 
@@ -178,7 +178,7 @@ GitHub Actions pipelines, Docker Compose definitions, backup scripts, custom ESL
 
 ## Review Escalation
 
-If a PR touches multiple service areas, all relevant owners are requested automatically by GitHub via `CODEOWNERS`. When owners disagree on an approach, escalate to `@stellar-analytics/maintainers` for a binding decision.
+If a PR touches multiple service areas, all relevant owners are requested automatically by GitHub via `CODEOWNERS`. When owners disagree on an approach, escalate to `@stroop/maintainers` for a binding decision.
 
 For urgent hotfixes targeting `main`, any single owner from the relevant team may approve, but a follow-up review from the remaining owners is required within one business day.
 
@@ -190,7 +190,7 @@ When a team is renamed, a new service area is added, path patterns change, or ow
 
 1. Update [`.github/CODEOWNERS`](../.github/CODEOWNERS) with the new path patterns and team handles.
 2. Update the teams table and the relevant service section in this file.
-3. Open a PR and request review from `@stellar-analytics/maintainers`.
+3. Open a PR and request review from `@stroop/maintainers`.
 
 Both files must be updated in the same PR — they must never be out of sync.
 

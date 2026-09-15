@@ -58,7 +58,7 @@ pnpm test:visual
 pnpm test:visual:update
 
 # Open the Playwright HTML report after a run
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 > **First run (no baselines yet):** `pnpm test:visual:update` to generate the

@@ -16,7 +16,7 @@ Schema changes are managed with [node-pg-migrate](https://github.com/salsita/nod
 Set `DATABASE_URL` before running migrations:
 
 ```bash
-export DATABASE_URL=postgresql://stellar:stellar@localhost:5432/stellar_analytics
+export DATABASE_URL=postgresql://stellar:stellar@localhost:5432/stroop
 ```
 
 ## Commands
@@ -44,7 +44,7 @@ The indexer also runs pending migrations automatically on startup.
 1. Create migration file:
 
 ```bash
-pnpm --filter @stellar-analytics/indexer db:migrate:create add_new_table
+pnpm --filter @stroop/indexer db:migrate:create add_new_table
 ```
 
 2. Implement `exports.up` and `exports.down` in the generated file.
@@ -69,7 +69,7 @@ pnpm db:migrate:down
 Rollback multiple migrations:
 
 ```bash
-pnpm --filter @stellar-analytics/indexer exec ts-node src/database/migrate.ts --down --count=2
+pnpm --filter @stroop/indexer exec ts-node src/database/migrate.ts --down --count=2
 ```
 
 Always implement `exports.down` for reversible changes.
@@ -167,10 +167,10 @@ When creating a new migration that changes the schema:
 
 ```bash
 # Run schema version manager unit tests
-pnpm --filter @stellar-analytics/indexer test -- --testPathPattern schema-version
+pnpm --filter @stroop/indexer test -- --testPathPattern schema-version
 
 # Run full migration tests (includes schema version checks)
-pnpm --filter @stellar-analytics/indexer test:migrations
+pnpm --filter @stroop/indexer test:migrations
 ```
 
 ## CI/CD
@@ -254,7 +254,7 @@ Follow this checklist for every database schema change from local development th
 - [ ] **2.4 Migration Execution**
   - Run the migration runner against target database:
     ```bash
-    export DATABASE_URL="postgresql://user:pass@db.prod:5432/stellar_analytics"
+    export DATABASE_URL="postgresql://user:pass@db.prod:5432/stroop"
     pnpm db:migrate
     ```
   - Verify entry in the `pgmigrations` audit table:

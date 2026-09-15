@@ -1,6 +1,6 @@
 # GraphQL Schema Validation
 
-This document describes the GraphQL schema validation process for the Stellar Analytics Dashboard.
+This document describes the GraphQL schema validation process for the Stroop.
 
 ## Overview
 

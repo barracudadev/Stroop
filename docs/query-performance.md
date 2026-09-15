@@ -62,7 +62,7 @@ Cache keys are derived from query parameters to avoid stale cross-filter respons
 Run plan analysis against your database:
 
 ```bash
-export DATABASE_URL=postgresql://stellar:stellar@localhost:5432/stellar_analytics
+export DATABASE_URL=postgresql://stellar:stellar@localhost:5432/stroop
 sh scripts/database/analyze-query-plans.sh
 ```
 

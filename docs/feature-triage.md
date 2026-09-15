@@ -1,6 +1,6 @@
 # Feature Triage, Scoring, and Scheduling
 
-This document defines how new feature ideas for the Stellar Analytics Dashboard are captured, evaluated, prioritised, and scheduled for implementation.
+This document defines how new feature ideas for the Stroop are captured, evaluated, prioritised, and scheduled for implementation.
 
 ---
 

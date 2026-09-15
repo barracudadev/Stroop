@@ -72,7 +72,7 @@ ALERT_EMAIL_TO_ADDRESSES=ops@example.com,team@example.com
 - API logs each alert at `warn` level with structured metadata.
 - Re-run detection manually:
   ```bash
-  pnpm --filter @stellar-analytics/api exec ts-node scripts/detect-account-activity-alerts.ts
+  pnpm --filter @stroop/api exec ts-node scripts/detect-account-activity-alerts.ts
   ```
 
 ---
@@ -126,7 +126,7 @@ EMAIL_SMTP_HOST=smtp.gmail.com
 EMAIL_SMTP_PORT=587
 EMAIL_SMTP_USER=your-email@example.com
 EMAIL_SMTP_PASSWORD=your-app-password
-EMAIL_FROM_ADDRESS=api@stellar-analytics.local
+EMAIL_FROM_ADDRESS=api@stroop.local
 EMAIL_TO_ADDRESSES=ops@example.com,team@example.com
 ```
 
@@ -182,21 +182,21 @@ VITE_PERF_CRITICAL_MS=8000
 
 ```bash
 # Temporarily lower the threshold so any query triggers it
-PERF_ALERTING_ENABLED=true PERF_SLOW_GRAPHQL_WARN_MS=0 pnpm --filter @stellar-analytics/api dev:start
+PERF_ALERTING_ENABLED=true PERF_SLOW_GRAPHQL_WARN_MS=0 pnpm --filter @stroop/api dev:start
 # Send any GraphQL query → alert fires immediately
 ```
 
 ### Manual – Frontend
 
 ```bash
-VITE_PERF_WARN_MS=0 pnpm --filter @stellar-analytics/frontend dev
+VITE_PERF_WARN_MS=0 pnpm --filter @stroop/frontend dev
 # Open the dashboard → toast appears for every Apollo operation
 ```
 
 ### Unit tests
 
 ```bash
-pnpm --filter @stellar-analytics/api test -- --testPathPattern=performance-alerting
+pnpm --filter @stroop/api test -- --testPathPattern=performance-alerting
 ```
 
 ---

@@ -1,6 +1,6 @@
 # Deployment Smoke Tests
 
-This document describes the deployment smoke tests for the Stellar Analytics Dashboard.
+This document describes the deployment smoke tests for the Stroop.
 
 ## Overview
 
@@ -42,13 +42,13 @@ The smoke test suite (`packages/e2e/tests/smoke/deployment.spec.ts`) includes:
 
 ```bash
 # Run against a local development instance
-pnpm --filter @stellar-analytics/e2e test:smoke
+pnpm --filter @stroop/e2e test:smoke
 
 # Run against a specific deployment URL
-pnpm --filter @stellar-analytics/e2e test:smoke --url https://staging.example.com
+pnpm --filter @stroop/e2e test:smoke --url https://staging.example.com
 
 # Run with verbose output
-pnpm --filter @stellar-analytics/e2e test:smoke --url https://staging.example.com --verbose
+pnpm --filter @stroop/e2e test:smoke --url https://staging.example.com --verbose
 ```
 
 ### In CI/CD

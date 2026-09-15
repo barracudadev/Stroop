@@ -1,6 +1,6 @@
 # Issue Triage and Work Planning
 
-This document is the single authoritative reference for how new issues move from first filing through sprint execution in the Stellar Analytics Dashboard monorepo. It supersedes any conflicting guidance in other docs and links to specialist guides where relevant.
+This document is the single authoritative reference for how new issues move from first filing through sprint execution in the Stroop monorepo. It supersedes any conflicting guidance in other docs and links to specialist guides where relevant.
 
 ---
 
@@ -169,8 +169,8 @@ Issues that cannot wait for the next triage meeting must be escalated immediatel
 
 | Situation | Action |
 |-----------|--------|
-| Security vulnerability | Label `priority: critical` + `security`, open a **private** security advisory via GitHub Security tab, notify `@stellar-analytics/maintainers` directly |
-| Data-loss or corruption risk | Label `priority: critical`, ping area owner and `@stellar-analytics/platform-infra` in the issue |
+| Security vulnerability | Label `priority: critical` + `security`, open a **private** security advisory via GitHub Security tab, notify `@stroop/maintainers` directly |
+| Data-loss or corruption risk | Label `priority: critical`, ping area owner and `@stroop/platform-infra` in the issue |
 | Production incident | Follow [`docs/incident-response-runbook.md`](./incident-response-runbook.md); open a tracking issue post-incident |
 
 Critical issues bypass RICE scoring and the triage queue. They enter the current sprint immediately and are assigned before the end of the business day they are reported.

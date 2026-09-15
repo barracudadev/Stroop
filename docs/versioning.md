@@ -1,6 +1,6 @@
 # Versioning & Release Process
 
-This document explains how Stellar Analytics Dashboard is versioned, what belongs
+This document explains how Stroop is versioned, what belongs
 in each type of release, and the step-by-step process for cutting a release.
 
 ---

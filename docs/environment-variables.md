@@ -1,6 +1,6 @@
 # Environment Variables Reference
 
-Central reference for every environment variable consumed by the Stellar Analytics Dashboard monorepo.
+Central reference for every environment variable consumed by the Stroop monorepo.
 
 **Template files:** `indexer/.env.example`, `packages/api/.env.example`, `packages/e2e/.env.example`
 
@@ -34,7 +34,7 @@ Central reference for every environment variable consumed by the Stellar Analyti
 | `EMAIL_SMTP_PORT` | No | `587` | SMTP port |
 | `EMAIL_SMTP_USER` | No | — | SMTP username |
 | `EMAIL_SMTP_PASSWORD` | No | — | SMTP password |
-| `EMAIL_FROM_ADDRESS` | No | `indexer@stellar-analytics.local` | Sender address for alerts |
+| `EMAIL_FROM_ADDRESS` | No | `indexer@stroop.local` | Sender address for alerts |
 | `EMAIL_TO_ADDRESSES` | No | — | Comma-separated alert recipients |
 | `EMAIL_ALERT_COOLDOWN_MS` | No | `300000` | Cooldown between email alerts |
 | `ALERT_ERROR_RATE_PERCENT` | No | `10` | Error-rate threshold for alerts |

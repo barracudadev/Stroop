@@ -1,4 +1,4 @@
-# Stellar Analytics Indexer - Alerting System
+# Stroop Indexer - Alerting System
 
 **Issue #143** – Add alerting for indexer errors
 
@@ -37,7 +37,7 @@ EMAIL_SMTP_HOST=smtp.gmail.com
 EMAIL_SMTP_PORT=587
 EMAIL_SMTP_USER=your-email@gmail.com
 EMAIL_SMTP_PASSWORD=your-app-password
-EMAIL_FROM_ADDRESS=indexer@stellar-analytics.local
+EMAIL_FROM_ADDRESS=indexer@stroop.local
 EMAIL_TO_ADDRESSES=ops@example.com,team@example.com
 EMAIL_ALERT_COOLDOWN_MS=300000  # 5 minutes (optional)
 
@@ -89,12 +89,12 @@ Example alert email:
 ```
 Subject: [CRITICAL] Database Connection Error
 
-From: indexer@stellar-analytics.local
+From: indexer@stroop.local
 To: ops@example.com, team@example.com
 
 Dear Operator,
 
-The Stellar Analytics Indexer encountered a critical error:
+The Stroop Indexer encountered a critical error:
 
 Title: Database Connection Error
 Severity: CRITICAL
@@ -103,7 +103,7 @@ Error: Connection refused on localhost:5432
 Please investigate immediately.
 
 Timestamp: 2024-01-15T10:30:00.000Z
-Stellar Analytics Indexer
+Stroop Indexer
 ```
 
 ## Alert Thresholds

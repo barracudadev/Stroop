@@ -25,7 +25,7 @@
 - **frontend**: bundle size optimizations via code splitting and chunking (`f35701a8`)
 - **frontend**: add keyboard navigation to GlobalSearch (`27e2a751`)
 - **cache**: improve Redis query caching with ttl and invalidation (`5bfcb0d0`)
-- implement full idempotency protection for database operations ## Overview Implement a comprehensive, production-grade idempotency tracking system for all database write operations in the Stellar Analytics Indexer. (`af347c3b`)
+- implement full idempotency protection for database operations ## Overview Implement a comprehensive, production-grade idempotency tracking system for all database write operations in the Stroop Indexer. (`af347c3b`)
 - implement full idempotency protection for database operations (`d3b12576`)
 - **testing**: add frontend testing infrastructure with Vitest, RTL, and coverage (`53c6cad3`)
 - implement dark mode with theme toggle and persistence (`2e4ca07a`)
@@ -34,9 +34,9 @@
 - implement comprehensive E2E testing suite with Playwright (#81) (`72075931`)
 - **indexer**: add backfill, parallel processing, config validation, and logging (#38 #45 #46 #47) (`fa4a121a`)
 - **indexer**: add validation, circuit breaker, metrics, idempotency (#39 #41 #43 #44) (`8d1936a3`)
-- complete GraphQL API for Stellar analytics (Issue #4) (`24bc3cb7`)
+- complete GraphQL API for Stroop (Issue #4) (`24bc3cb7`)
 - implement stellar horizon indexer with postgres storage and realtime updates (#13) (`3b013b0d`)
-- scaffold stellar analytics monorepo architecture (`9d5ebc0f`)
+- scaffold Stroop monorepo architecture (`9d5ebc0f`)
 
 ### 🐛 Bug Fixes
 
@@ -73,7 +73,7 @@
 
 # Changelog
 
-All notable changes to the Stellar Analytics Dashboard are documented here.
+All notable changes to the Stroop are documented here.
 
 Entries are generated automatically from conventional commits using
 `scripts/generate-release-notes.mjs`. See [RELEASE_NOTES.md](./docs/release-notes-process.md)

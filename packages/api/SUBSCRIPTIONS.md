@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Stellar Analytics API supports GraphQL subscriptions for real-time data updates. These are implemented using WebSocket and integrated with the PubSub system.
+The Stroop API supports GraphQL subscriptions for real-time data updates. These are implemented using WebSocket and integrated with the PubSub system.
 
 ## Available Subscriptions
 

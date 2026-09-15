@@ -1,6 +1,6 @@
 # CI Operational Notes
 
-This document provides operational guidance for the CI/CD pipeline for the Stellar Analytics Dashboard.
+This document provides operational guidance for the CI/CD pipeline for the Stroop.
 
 ## CI Workflows
 
@@ -30,7 +30,7 @@ The main CI workflow runs on every push and pull request to `main` and `develop`
 - Verifies the deployed application is functional
 - **Runtime**: ~10 minutes
 - **Note**: Requires a running deployment to test against
-- **Manual run**: `pnpm --filter @stellar-analytics/e2e test:smoke --url <deployment-url>`
+- **Manual run**: `pnpm --filter @stroop/e2e test:smoke --url <deployment-url>`
 
 ### Deployment Smoke Tests Workflow (`.github/workflows/deployment-smoke-tests.yml`)
 
@@ -92,25 +92,25 @@ This workflow scans for container and dependency vulnerabilities:
 ### Unit Tests
 
 ```bash
-pnpm --filter @stellar-analytics/frontend test:ci
+pnpm --filter @stroop/frontend test:ci
 ```
 
 ### Migration Tests
 
 ```bash
-pnpm --filter @stellar-analytics/indexer test:migrations
+pnpm --filter @stroop/indexer test:migrations
 ```
 
 ### E2E Tests
 
 ```bash
-pnpm --filter @stellar-analytics/e2e test:ci
+pnpm --filter @stroop/e2e test:ci
 ```
 
 ### Smoke Tests
 
 ```bash
-pnpm --filter @stellar-analytics/e2e test:smoke --url https://staging.example.com
+pnpm --filter @stroop/e2e test:smoke --url https://staging.example.com
 ```
 
 ### GraphQL Schema Validation

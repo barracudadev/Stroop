@@ -95,12 +95,12 @@ Dependabot PRs are labelled with the relevant scope (e.g. `scope: frontend`, `sc
 
 | Label | Reviewing team |
 |-------|---------------|
-| `scope: shared`, `scope: packages/shared` | `@stellar-analytics/maintainers` |
-| `scope: indexer`, `scope: packages/indexer` | `@stellar-analytics/indexer-team` |
-| `scope: api`, `scope: packages/api` | `@stellar-analytics/api-team` |
-| `scope: frontend`, `scope: packages/frontend` | `@stellar-analytics/frontend-team` |
-| `scope: e2e` | `@stellar-analytics/qa-team` |
-| `scope: docker`, `scope: github-actions` | `@stellar-analytics/platform-infra` |
+| `scope: shared`, `scope: packages/shared` | `@stroop/maintainers` |
+| `scope: indexer`, `scope: packages/indexer` | `@stroop/indexer-team` |
+| `scope: api`, `scope: packages/api` | `@stroop/api-team` |
+| `scope: frontend`, `scope: packages/frontend` | `@stroop/frontend-team` |
+| `scope: e2e` | `@stroop/qa-team` |
+| `scope: docker`, `scope: github-actions` | `@stroop/platform-infra` |
 
 ### Review checklist
 
@@ -128,10 +128,10 @@ When a package needs updating outside the weekly cycle (e.g. a zero-day vulnerab
 
 ```bash
 # Update a single package in a workspace
-pnpm --filter @stellar-analytics/api update graphql
+pnpm --filter @stroop/api update graphql
 
 # Update all packages in a workspace to their latest allowed version
-pnpm --filter @stellar-analytics/frontend update
+pnpm --filter @stroop/frontend update
 
 # Check what is outdated across the whole monorepo
 pnpm outdated -r
@@ -156,7 +156,7 @@ When you add a new `npm` dependency:
 
 1. Use an exact or caret range:
    ```bash
-   pnpm --filter @stellar-analytics/frontend add react-virtuoso
+   pnpm --filter @stroop/frontend add react-virtuoso
    ```
 2. Prefer packages that are actively maintained (recent commits, no open CVEs).
 3. Avoid packages with unusual names that could be typosquatting variants — verify the npm page and GitHub repo before installing.

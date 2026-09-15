@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Network Comparison Chart feature (Issue #243) provides side-by-side trend visualization for comparing mainnet and testnet performance metrics in the Stellar Analytics Dashboard.
+The Network Comparison Chart feature (Issue #243) provides side-by-side trend visualization for comparing mainnet and testnet performance metrics in the Stroop.
 
 ## Features
 

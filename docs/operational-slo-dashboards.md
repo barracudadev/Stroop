@@ -1,6 +1,6 @@
 # Operational Service Level Objective (SLO) Dashboards
 
-This document defines the production **Service Level Indicators (SLIs)**, **Service Level Objectives (SLOs)**, **Error Budget Policies**, and **Grafana Dashboards** for the Stellar Analytics Dashboard monorepo.
+This document defines the production **Service Level Indicators (SLIs)**, **Service Level Objectives (SLOs)**, **Error Budget Policies**, and **Grafana Dashboards** for the Stroop monorepo.
 
 ---
 

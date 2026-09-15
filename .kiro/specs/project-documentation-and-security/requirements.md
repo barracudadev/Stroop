@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This feature adds comprehensive documentation to the Stellar Analytics Dashboard monorepo across four markdown files. The work is purely documentation — no CI tooling, no automated scanning pipelines. The four files are:
+This feature adds comprehensive documentation to the Stroop monorepo across four markdown files. The work is purely documentation — no CI tooling, no automated scanning pipelines. The four files are:
 
 - `docs/database.md` — database schema, ER diagram, data dictionary, query examples
 - `docs/deployment.md` — production setup, environment variables, troubleshooting
@@ -13,10 +13,10 @@ The project is a TypeScript monorepo using pnpm workspaces with three services: 
 
 ## Glossary
 
-- **Dashboard**: The Stellar Analytics Dashboard monorepo as a whole
-- **Indexer**: The `@stellar-analytics/indexer` service that ingests Stellar blockchain data
-- **API**: The `@stellar-analytics/api` GraphQL service backed by PostgreSQL
-- **Frontend**: The `@stellar-analytics/frontend` React/Vite application
+- **Dashboard**: The Stroop monorepo as a whole
+- **Indexer**: The `@stroop/indexer` service that ingests Stellar blockchain data
+- **API**: The `@stroop/api` GraphQL service backed by PostgreSQL
+- **Frontend**: The `@stroop/frontend` React/Vite application
 - **Database**: The PostgreSQL 16 instance storing ledgers, transactions, operations, and payments
 - **ER_Diagram**: Entity-Relationship diagram showing tables, columns, and foreign key relationships
 - **Data_Dictionary**: A structured reference listing every table column with its type, constraints, and description

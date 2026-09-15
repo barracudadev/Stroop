@@ -1,6 +1,6 @@
 # Release Notes Process
 
-This document describes how release notes and the CHANGELOG are generated, reviewed, and published for the Stellar Analytics Dashboard.
+This document describes how release notes and the CHANGELOG are generated, reviewed, and published for the Stroop.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-A **production-ready E2E testing suite** has been successfully implemented for the Stellar Analytics Dashboard using **Playwright**. The solution includes:
+A **production-ready E2E testing suite** has been successfully implemented for the Stroop using **Playwright**. The solution includes:
 
 - ✅ **46 comprehensive tests** covering all critical user flows
 - ✅ **Cross-browser testing** (Chrome, Firefox, Safari)
@@ -99,7 +99,7 @@ packages/e2e/ (Complete E2E Package)
 ### 1️⃣ Install Dependencies (2 minutes)
 ```bash
 pnpm install
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 ```
 
 ### 2️⃣ Start Services (in Terminal 1)
@@ -118,7 +118,7 @@ pnpm test:e2e
 
 ### 4️⃣ View Results
 ```bash
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ---
@@ -204,7 +204,7 @@ pnpm test:e2e:webkit
 pnpm test:e2e:codegen
 
 # View report
-pnpm --filter @stellar-analytics/e2e exec playwright show-report
+pnpm --filter @stroop/e2e exec playwright show-report
 ```
 
 ---
@@ -415,7 +415,7 @@ Your E2E testing suite is ready to:
 ### Ready to Start?
 ```bash
 pnpm install
-pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+pnpm --filter @stroop/e2e exec playwright install --with-deps
 pnpm dev
 # In another terminal:
 pnpm test:e2e:ui

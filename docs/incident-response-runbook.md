@@ -1,4 +1,4 @@
-# Stellar Analytics Dashboard — Incident Response Runbook
+# Stroop — Incident Response Runbook
 
 **Version:** 1.0  
 **Last Updated:** 2026-08-27  
@@ -45,7 +45,7 @@
 
 ## 1. Service Architecture Overview
 
-The Stellar Analytics Dashboard platform consists of three main services plus supporting infrastructure:
+The Stroop platform consists of three main services plus supporting infrastructure:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -276,10 +276,10 @@ Step 5: If Horizon is unhealthy
 ```
 Step 1: Check PostgreSQL container status
   docker ps | grep postgres
-  docker logs stellar-analytics-postgres-dev
+  docker logs stroop-postgres-dev
 
 Step 2: Verify database connectivity from the service host
-  PGPASSWORD=stellar psql -h localhost -U stellar -d stellar_analytics -c "SELECT 1"
+  PGPASSWORD=stellar psql -h localhost -U stellar -d stroop -c "SELECT 1"
 
 Step 3: Check connection pool metrics
   curl http://localhost:4000/health
@@ -335,7 +335,7 @@ Step 7: Restart the API server after DB recovers
 ```
 Step 1: Check Redis container
   docker ps | grep redis
-  docker logs stellar-analytics-redis-dev
+  docker logs stroop-redis-dev
 
 Step 2: Test Redis connectivity
   redis-cli -h localhost -p 6379 ping
@@ -610,7 +610,7 @@ Step 3: Analyze query execution plan
 
 Step 4: Fix missing indexes
   Create a new migration:
-    pnpm --filter @stellar-analytics/indexer db:migrate:create add_index_for_xyz
+    pnpm --filter @stroop/indexer db:migrate:create add_index_for_xyz
   Apply: pnpm db:migrate
 
 Step 5: Optimize the GraphQL query
@@ -1176,7 +1176,7 @@ cd packages/indexer
 pnpm db:migrate:down
 
 # Rollback multiple migrations
-pnpm --filter @stellar-analytics/indexer exec ts-node src/database/migrate.ts --down --count=2
+pnpm --filter @stroop/indexer exec ts-node src/database/migrate.ts --down --count=2
 
 # Re-apply the last migration (test rollback)
 pnpm db:migrate:redo
@@ -1357,8 +1357,8 @@ curl http://localhost:4000/metrics
 curl http://localhost:3001/metrics
 
 # Database
-docker compose exec postgres psql -U stellar -d stellar_analytics
-psql -h localhost -U stellar -d stellar_analytics -c "SELECT count(*) FROM ledgers;"
+docker compose exec postgres psql -U stellar -d stroop
+psql -h localhost -U stellar -d stroop -c "SELECT count(*) FROM ledgers;"
 
 # Backups
 pnpm backup:run

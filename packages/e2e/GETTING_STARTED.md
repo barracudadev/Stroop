@@ -4,7 +4,7 @@
 
 - [ ] Navigate to project root
   ```bash
-  cd /workspaces/-stellar-analytics-dashboard
+  cd /workspaces/-Stroop
   ```
 
 - [ ] Install E2E dependencies
@@ -14,12 +14,12 @@
 
 - [ ] Install Playwright browsers
   ```bash
-  pnpm --filter @stellar-analytics/e2e exec playwright install --with-deps
+  pnpm --filter @stroop/e2e exec playwright install --with-deps
   ```
 
 - [ ] Verify installation
   ```bash
-  pnpm --filter @stellar-analytics/e2e exec playwright --version
+  pnpm --filter @stroop/e2e exec playwright --version
   ```
 
 ## ✅ Phase 2: Environment Setup (5 minutes)
@@ -31,7 +31,7 @@
 
 - [ ] Verify database setup
   ```bash
-  psql -d stellar_analytics_dev -U stellar_user
+  psql -d stroop_dev -U stellar_user
   ```
 
 - [ ] Create test user in database (if not exists)
@@ -68,7 +68,7 @@
 
 - [ ] View test results
   ```bash
-  pnpm --filter @stellar-analytics/e2e exec playwright show-report
+  pnpm --filter @stroop/e2e exec playwright show-report
   ```
 
 ## ✅ Phase 4: Explore Capabilities (15 minutes)
@@ -240,7 +240,7 @@ You'll know it's working when:
 
 3. **Check database connection**
    ```bash
-   psql -d stellar_analytics_dev -U stellar_user
+   psql -d stroop_dev -U stellar_user
    ```
 
 4. **Run test with debug flag**
