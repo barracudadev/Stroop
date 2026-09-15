@@ -1,6 +1,6 @@
-# Contributing to Stellar Analytics Dashboard
+# Contributing to Stroop
 
-Thank you for your interest in contributing to the Stellar Analytics Dashboard! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to Stroop! This document provides guidelines and information for contributors.
 
 ## 🚀 Getting Started
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to the Stellar Analytics Dashboard! 
 
 1. **Fork and clone the repository**
    ```bash
-   git clone https://github.com/your-username/stellar-analytics-dashboard.git
-   cd stellar-analytics-dashboard
+   git clone https://github.com/barracudadev/Stroop.git
+   cd Stroop
    ```
 
 2. **Install dependencies**
@@ -37,7 +37,7 @@ Thank you for your interest in contributing to the Stellar Analytics Dashboard! 
 ## 📁 Project Structure
 
 ```
-stellar-analytics-dashboard/
+Stroop/
 ├── indexer/             # Indexer service (runtime source)
 │   └── src/
 ├── packages/
@@ -80,7 +80,7 @@ git checkout -b fix/your-bug-fix
 pnpm test
 
 # Run tests for specific package
-pnpm --filter @stellar-analytics/api test
+pnpm --filter @stroop/api test
 
 # Run with coverage
 pnpm test --coverage
@@ -196,13 +196,13 @@ describe('formatAsset', () => {
 
 ```bash
 # Add to specific package
-pnpm --filter @stellar-analytics/api add graphql
+pnpm --filter @stroop/api add graphql
 
 # Add to all packages
 pnpm add -w typescript
 
 # Add dev dependency
-pnpm --filter @stellar-analytics/frontend add -D @types/react
+pnpm --filter @stroop/frontend add -D @types/react
 ```
 
 ### Building Packages
@@ -212,7 +212,7 @@ pnpm --filter @stellar-analytics/frontend add -D @types/react
 pnpm build
 
 # Build specific package
-pnpm --filter @stellar-analytics/shared build
+pnpm --filter @stroop/shared build
 ```
 
 ## 🔧 Database Changes
@@ -348,4 +348,4 @@ All issues — features, bugs, and docs gaps — follow a consistent lifecycle:
 
 The complete process, RICE scoring guide, sprint planning rules, and escalation path are documented in [`docs/issue-triage-and-planning.md`](docs/issue-triage-and-planning.md).
 
-Thank you for contributing to Stellar Analytics Dashboard! 🎉
+Thank you for contributing to Stroop! 🎉
