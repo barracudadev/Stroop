@@ -18,7 +18,7 @@ export interface PanelConfig {
   visible: boolean;
 }
 
-const STORAGE_KEY = 'stellar-analytics-dashboard-layout';
+const STORAGE_KEY = 'stroop-layout';
 
 export const DEFAULT_LAYOUT: PanelConfig[] = [
   { id: 'metrics', visible: true },

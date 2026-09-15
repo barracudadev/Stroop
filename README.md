@@ -1,6 +1,9 @@
-# Stellar Analytics Dashboard
+# Stroop
 
 Monorepo scaffold for a Stellar blockchain analytics platform with a data pipeline, GraphQL API, React dashboard, and shared TypeScript package.
+
+Repository: [https://github.com/barracudadev/Stroop.git](https://github.com/barracudadev/Stroop.git)  
+Maintainer: **Barracuda** (<skillxplorer@gmail.com>)
 
 ## Project Structure
 
@@ -115,9 +118,9 @@ pnpm backup:health
 3. Run services in separate terminals:
 
 ```bash
-pnpm --filter @stellar-analytics/indexer dev
-pnpm --filter @stellar-analytics/api dev
-pnpm --filter @stellar-analytics/frontend dev
+pnpm --filter @stroop/indexer dev
+pnpm --filter @stroop/api dev
+pnpm --filter @stroop/frontend dev
 ```
 
 ## Endpoints
@@ -168,3 +171,8 @@ See `docs/code-ownership.md` for the ownership table, per-area acceptance criter
 Third-party packages are updated automatically each week via Dependabot. Security advisories are handled immediately.
 
 See `docs/dependency-management.md` for the full update policy and review checklist.
+
+## License & Contact
+
+Distributed under the MIT License. Copyright (c) 2026 **Barracuda** (<skillxplorer@gmail.com>).
+

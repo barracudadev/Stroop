@@ -5,7 +5,7 @@ import { IndexerService, type IndexerServiceOptions } from './services/indexer-s
 import { db } from './database/connection';
 import { runMigrations } from './database/migrate';
 import { SchemaVersionManager } from './database/schema-version';
-import { STELLAR_NETWORKS, HORIZON_URLS } from '@stellar-analytics/shared';
+import { STELLAR_NETWORKS, HORIZON_URLS } from '@stroop/shared';
 
 // Load environment variables
 dotenv.config();

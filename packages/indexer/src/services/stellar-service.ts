@@ -1,5 +1,5 @@
 import { Horizon, Server } from '@stellar/stellar-sdk';
-import { Ledger, Transaction, Operation } from '@stellar-analytics/shared';
+import { Ledger, Transaction, Operation } from '@stroop/shared';
 import { CircuitBreaker, CircuitOpenError } from '../circuit-breaker/CircuitBreaker';
 import { metrics } from '../metrics/IndexerMetrics';
 import {

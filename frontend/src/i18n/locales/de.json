@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Stellar Analytics Dashboard",
+    "title": "Stroop",
     "network": "Netzwerk",
     "latestLedger": "Letztes Hauptbuch",
     "refreshing": "Aktualisiere…",

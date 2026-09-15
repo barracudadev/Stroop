@@ -7,9 +7,9 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
     "paths": {
-      "@stellar-analytics/shared": ["./packages/shared/dist/index"]
+      "*": ["./*"],
+      "@stroop/shared": ["./packages/shared/dist/index"]
     }
   }
 }

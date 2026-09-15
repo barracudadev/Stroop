@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', '@stellar-analytics'],
+  plugins: ['@typescript-eslint', 'prettier', '@stroop'],
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 2022,
@@ -41,13 +41,13 @@ module.exports = {
         // SQL belongs in the database layer, not inside resolvers.
         // Warn rather than error so existing code isn't blocked immediately;
         // raise to 'error' once the database query helpers are in place.
-        '@stellar-analytics/no-raw-sql-in-resolver': 'warn',
+        '@stroop/no-raw-sql-in-resolver': 'warn',
 
         // Every Mutation resolver MUST guard context.user before executing.
-        '@stellar-analytics/require-auth-check': 'error',
+        '@stroop/require-auth-check': 'error',
 
         // Unawaited Promises silently drop errors in the GraphQL context.
-        '@stellar-analytics/no-unhandled-promise-in-resolver': 'error',
+        '@stroop/no-unhandled-promise-in-resolver': 'error',
       },
     },
 
@@ -62,7 +62,7 @@ module.exports = {
         project: ['./indexer/tsconfig.json'],
       },
       rules: {
-        '@stellar-analytics/no-unhandled-promise-in-resolver': 'error',
+        '@stroop/no-unhandled-promise-in-resolver': 'error',
       },
     },
   ],

@@ -21,7 +21,7 @@ import {
   PAYMENT_OPERATIONS,
   DEX_OPERATIONS,
   getCachedIndexerConfig,
-} from '@stellar-analytics/shared';
+} from '@stroop/shared';
 import { CircuitOpenError } from '../circuit-breaker/CircuitBreaker';
 import { metrics } from '../metrics/IndexerMetrics';
 import { IdempotencyTracker } from '../idempotency/IdempotencyTracker';

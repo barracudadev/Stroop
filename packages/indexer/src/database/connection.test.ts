@@ -288,4 +288,4 @@ function buildPoolConfig(options?: PoolOptions): PoolConfig {
  * and graceful shutdown.
  *
  * @example
- *
+ */

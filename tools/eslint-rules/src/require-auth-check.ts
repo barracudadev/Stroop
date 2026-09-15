@@ -49,7 +49,7 @@ const rule: Rule.RuleModule = {
       description:
         'Require an authentication guard (if (!context.user) throw …) at the start of every Mutation resolver.',
       recommended: true,
-      url: 'https://github.com/your-org/stellar-analytics-dashboard/blob/main/docs/static-analysis.md',
+      url: 'https://github.com/barracudadev/Stroop/blob/main/docs/static-analysis.md',
     },
     messages: {
       missingAuthCheck:

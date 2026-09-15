@@ -1,5 +1,5 @@
 /**
- * @stellar-analytics/eslint-plugin
+ * @stroop/eslint-plugin
  *
  * Custom ESLint rules for detecting risky patterns in the API and indexer
  * packages earlier in the development cycle.
@@ -27,7 +27,7 @@ interface EslintPlugin {
 
 const plugin: EslintPlugin = {
   meta: {
-    name: '@stellar-analytics/eslint-plugin',
+    name: '@stroop/eslint-plugin',
     version: '1.0.0',
   },
   rules: {
@@ -40,14 +40,14 @@ const plugin: EslintPlugin = {
      * Recommended config — apply to all API and indexer TypeScript source files.
      *
      * Usage in .eslintrc.js:
-     *   extends: ['plugin:@stellar-analytics/recommended']
+     *   extends: ['plugin:@stroop/recommended']
      */
     recommended: {
-      plugins: ['@stellar-analytics'],
+      plugins: ['@stroop'],
       rules: {
-        '@stellar-analytics/no-raw-sql-in-resolver': 'warn',
-        '@stellar-analytics/require-auth-check': 'error',
-        '@stellar-analytics/no-unhandled-promise-in-resolver': 'error',
+        '@stroop/no-raw-sql-in-resolver': 'warn',
+        '@stroop/require-auth-check': 'error',
+        '@stroop/no-unhandled-promise-in-resolver': 'error',
       },
     },
   },

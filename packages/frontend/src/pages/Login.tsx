@@ -75,7 +75,7 @@ export function Login() {
             <LogIn className="w-8 h-8 text-primary-foreground" aria-hidden="true" />
           </div>
           <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground">Sign in to access Stellar Analytics Dashboard</p>
+          <p className="text-muted-foreground">Sign in to access Stroop</p>
         </div>
 
         <div className="bg-card border rounded-2xl p-8 shadow-lg">

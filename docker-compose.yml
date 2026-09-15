@@ -8,7 +8,7 @@ services:
       retries: 5
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: stellar_analytics
+      POSTGRES_DB: stroop
       POSTGRES_USER: stellar
       POSTGRES_PASSWORD: stellar
     ports:
@@ -29,7 +29,7 @@ services:
         "archive_command=test ! -f /var/lib/postgresql/wal_archive/%f && cp %p /var/lib/postgresql/wal_archive/%f"
       ]
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U stellar -d stellar_analytics"]
+      test: ["CMD-SHELL", "pg_isready -U stellar -d stroop"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -60,7 +60,7 @@ services:
       PGPASSWORD: stellar
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
-      POSTGRES_DB: stellar_analytics
+      POSTGRES_DB: stroop
       POSTGRES_USER: stellar
       BACKUP_RETENTION_DAYS: 90
       VERIFY_RESTORE: "true"

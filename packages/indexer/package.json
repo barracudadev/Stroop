@@ -1,5 +1,5 @@
 {
-  "name": "@stellar-analytics/indexer",
+  "name": "@stroop/indexer",
   "version": "1.0.0",
   "description": "Stellar blockchain data ingestion service",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "test:migrations": "jest --config jest.config.js --testPathPattern migrations.test --runInBand --forceExit"
   },
   "dependencies": {
-    "@stellar-analytics/shared": "workspace:*",
+    "@stroop/shared": "workspace:*",
     "@stellar/stellar-sdk": "^11.0.0",
     "node-pg-migrate": "^7.9.1",
     "pg": "^8.11.3",
@@ -56,7 +56,7 @@
       "**/src/tests/**/*.test.ts"
     ],
     "moduleNameMapper": {
-      "^@stellar-analytics/shared$": "<rootDir>/../shared/src/index.ts"
+      "^@stroop/shared$": "<rootDir>/../shared/src/index.ts"
     }
   }
 }

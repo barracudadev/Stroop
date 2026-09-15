@@ -328,7 +328,7 @@ export const typeDefs = gql`
   }
 
   """
-  Aggregated totals for `networkMetrics` over a time range — issue #220:
+  Aggregated totals for 'networkMetrics' over a time range — issue #220:
   aggregation endpoints should return summary counts/totals, not just the
   raw list of per-bucket data points.
   """

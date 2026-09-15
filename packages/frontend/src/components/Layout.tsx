@@ -172,7 +172,7 @@ export function Layout() {
                 >
                   S
                 </div>
-                <span className="text-xl font-bold tracking-tight">Stellar Analytics</span>
+                <span className="text-xl font-bold tracking-tight">Stroop</span>
               </div>
               <button
                 ref={sidebarFirstFocusRef}
@@ -219,14 +219,14 @@ export function Layout() {
         aria-label="Desktop sidebar"
       >
         <div className="flex h-20 shrink-0 items-center px-8 border-b border-border/50">
-          <Link to="/" className="flex items-center gap-3" aria-label="Stellar Analytics home">
+          <Link to="/" className="flex items-center gap-3" aria-label="Stroop home">
             <div
               className="h-9 w-9 bg-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold shadow-inner"
               aria-hidden="true"
             >
               S
             </div>
-            <span className="text-lg font-bold tracking-tight">Stellar Analytics</span>
+            <span className="text-lg font-bold tracking-tight">Stroop</span>
           </Link>
         </div>
 

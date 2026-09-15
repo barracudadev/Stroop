@@ -1,1 +1,1 @@
-export * from '../../packages/shared/src/utils/stroop';
+export * from '../../packages/shared/src/utils/stroop.js';

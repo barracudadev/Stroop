@@ -1,5 +1,5 @@
 import { UserInputError } from 'apollo-server-express';
-import { Connection, Edge, PageInfo, PaginationArgs } from '@stellar-analytics/shared';
+import { Connection, Edge, PageInfo, PaginationArgs } from '@stroop/shared';
 
 // Base64 encode/decode functions for cursor
 const toCursor = (str: string) => Buffer.from(str).toString('base64');

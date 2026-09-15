@@ -9,7 +9,7 @@
  */
 
 import { Horizon } from '@stellar/stellar-sdk';
-import { AccountEventType, OPERATION_TO_ACCOUNT_EVENT_TYPE } from '@stellar-analytics/shared';
+import { AccountEventType, OPERATION_TO_ACCOUNT_EVENT_TYPE } from '@stroop/shared';
 
 /**
  * A prepared account event row ready for DB insertion.

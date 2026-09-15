@@ -6,7 +6,7 @@ import { ValidationService } from '../services/validation';
 import { withResolverLogging, NotFoundError } from '../utils/resolver-error';
 import { createConnection, PaginationArgs } from '../utils/pagination';
 import { buildCacheKey, cachedQuery } from '../database/cached-query';
-import { Connection } from '@stellar-analytics/shared';
+import { Connection } from '@stroop/shared';
 import { buildOrderByClause, OrderByClause } from '../utils/sorting';
 
 function resolvePreset(preset: string): { startTime: string; endTime: string } {

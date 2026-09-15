@@ -4,9 +4,9 @@ services:
   # PostgreSQL Database (Development)
   postgres:
     image: postgres:15-alpine
-    container_name: stellar-analytics-postgres-dev
+    container_name: stroop-postgres-dev
     environment:
-      POSTGRES_DB: stellar_analytics_dev
+      POSTGRES_DB: stroop_dev
       POSTGRES_USER: stellar_user
       POSTGRES_PASSWORD: stellar_password
     ports:
@@ -27,19 +27,19 @@ services:
         "archive_command=test ! -f /var/lib/postgresql/wal_archive/%f && cp %p /var/lib/postgresql/wal_archive/%f"
       ]
     networks:
-      - stellar-dev-network
+      - stroop-dev-network
     restart: unless-stopped
 
   postgres-backup:
     image: postgres:15-alpine
-    container_name: stellar-analytics-postgres-backup-dev
+    container_name: stroop-postgres-backup-dev
     depends_on:
       - postgres
     environment:
       PGPASSWORD: stellar_password
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
-      POSTGRES_DB: stellar_analytics_dev
+      POSTGRES_DB: stroop_dev
       POSTGRES_USER: stellar_user
       BACKUP_RETENTION_DAYS: 30
       VERIFY_RESTORE: "true"
@@ -52,17 +52,17 @@ services:
       - ./backups/dev-wal:/backups/wal:ro
     entrypoint: ["/bin/sh", "/scripts/run-postgres-backup.sh"]
     networks:
-      - stellar-dev-network
+      - stroop-dev-network
     restart: unless-stopped
 
   # Redis Cache (Development)
   redis:
     image: redis:7-alpine
-    container_name: stellar-analytics-redis-dev
+    container_name: stroop-redis-dev
     ports:
       - "6379:6379"
     networks:
-      - stellar-dev-network
+      - stroop-dev-network
     restart: unless-stopped
 
 volumes:
@@ -70,5 +70,5 @@ volumes:
     driver: local
 
 networks:
-  stellar-dev-network:
+  stroop-dev-network:
     driver: bridge

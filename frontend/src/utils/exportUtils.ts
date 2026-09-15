@@ -174,7 +174,7 @@ export async function exportAsImage(stats: any, isDarkMode: boolean): Promise<vo
   // Title
   ctx.fillStyle = isDarkMode ? '#f1f5f9' : '#0f172a';
   ctx.font = 'bold 36px "Segoe UI", Arial, sans-serif';
-  ctx.fillText('STELLAR ANALYTICS DASHBOARD', 60, 80);
+  ctx.fillText('STROOP DASHBOARD', 60, 80);
 
   // Subtitle
   ctx.fillStyle = isDarkMode ? '#94a3b8' : '#64748b';
@@ -233,11 +233,11 @@ export async function exportAsImage(stats: any, isDarkMode: boolean): Promise<vo
   // Footer branding
   ctx.fillStyle = isDarkMode ? '#475569' : '#94a3b8';
   ctx.font = 'italic 14px "Segoe UI", Arial, sans-serif';
-  ctx.fillText('stellar-analytics-dashboard • Real-time Ingestion Service', 60, 580);
+  ctx.fillText('Stroop • Real-time Ingestion Service', 60, 580);
 
   // Download
   const link = document.createElement('a');
-  link.download = `stellar-analytics-${stats.network || 'network'}-${Date.now()}.png`;
+  link.download = `stroop-${stats.network || 'network'}-${Date.now()}.png`;
   link.href = canvas.toDataURL('image/png');
   link.click();
 }

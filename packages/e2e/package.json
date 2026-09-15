@@ -1,7 +1,7 @@
 {
-  "name": "@stellar-analytics/e2e",
+  "name": "@stroop/e2e",
   "version": "1.0.0",
-  "description": "E2E tests for Stellar Analytics Dashboard",
+  "description": "E2E tests for Stroop",
   "scripts": {
     "test": "playwright test",
     "test:debug": "playwright test --debug",

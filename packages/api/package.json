@@ -1,7 +1,7 @@
 {
-  "name": "@stellar-analytics/api",
+  "name": "@stroop/api",
   "version": "1.0.0",
-  "description": "GraphQL API server for Stellar Analytics Dashboard",
+  "description": "GraphQL API server for Stroop",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

@@ -1,7 +1,7 @@
 {
-  "name": "@stellar-analytics/frontend",
+  "name": "@stroop/frontend",
   "version": "1.0.0",
-  "description": "React analytics dashboard for Stellar Analytics Dashboard",
+  "description": "React analytics dashboard for Stroop",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,7 +22,7 @@
     "@apollo/client": "^3.8.8",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
-    "@stellar-analytics/shared": "workspace:*",
+    "@stroop/shared": "workspace:*",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.16",

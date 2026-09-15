@@ -188,7 +188,7 @@ const wsServer = new WebSocketServer({
 useServer({ schema, execute, subscribe }, wsServer);
 
 const connectionString =
-  process.env.DATABASE_URL || "postgres://postgres:postgres@localhost:5432/stellar_analytics";
+  process.env.DATABASE_URL || "postgres://postgres:postgres@localhost:5432/stroop";
 startLedgerEventListener(connectionString).catch((err) => {
   console.error("[api] failed to start ledger event listener", err);
 });

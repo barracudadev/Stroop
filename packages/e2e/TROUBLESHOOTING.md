@@ -333,7 +333,7 @@ env:
 
 5. **Check GitHub Issues**:
    - [Playwright Issues](https://github.com/microsoft/playwright/issues)
-   - [Project Issues](https://github.com/Kevin737866/-stellar-analytics-dashboard/issues)
+   - [Project Issues](https://github.com/barracudadev/Stroop/issues)
 
 ## Advanced Debugging
 

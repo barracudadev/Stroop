@@ -18,7 +18,8 @@ export const resolvers = {
       if (!context.user) {
         return null;
       }
-    ),
+      return context.user;
+    },
   },
   Mutation: {
     register: withResolverLogging(

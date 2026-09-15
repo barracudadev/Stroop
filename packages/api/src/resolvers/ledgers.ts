@@ -1,6 +1,6 @@
 import { GraphQLResolveInfo } from 'graphql';
 import { db, CACHE_TTL } from '../database/connection';
-import { Connection, PaginationArgs } from '@stellar-analytics/shared';
+import { Connection, PaginationArgs } from '@stroop/shared';
 import { mapLedger } from '../utils/mappers';
 import type { ApiLoaders } from '../loaders';
 import { ValidationService } from '../services/validation';

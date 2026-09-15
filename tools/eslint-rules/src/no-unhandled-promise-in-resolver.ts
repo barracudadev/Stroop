@@ -89,7 +89,7 @@ const rule: Rule.RuleModule = {
       description:
         'Disallow floating (unawaited, uncaught) Promise calls inside async resolver and indexer functions. Add `await`, chain `.catch()`, or use `void` for intentional discards.',
       recommended: true,
-      url: 'https://github.com/your-org/stellar-analytics-dashboard/blob/main/docs/static-analysis.md',
+      url: 'https://github.com/barracudadev/Stroop/blob/main/docs/static-analysis.md',
     },
     messages: {
       floatingPromise:

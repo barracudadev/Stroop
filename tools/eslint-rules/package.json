@@ -1,5 +1,5 @@
 {
-  "name": "@stellar-analytics/eslint-plugin",
+  "name": "@stroop/eslint-plugin",
   "version": "1.0.0",
   "description": "Custom ESLint rules for detecting risky patterns in API and indexer code",
   "main": "dist/index.js",

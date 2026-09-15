@@ -4,7 +4,7 @@ import { ValidationService } from '../services/validation';
 import { getStatsSummary } from '../services/stats-service';
 import { withResolverLogging } from '../utils/resolver-error';
 import { buildCacheKey, cachedQuery } from '../database/cached-query';
-import { Connection, PaginationArgs } from '@stellar-analytics/shared';
+import { Connection, PaginationArgs } from '@stroop/shared';
 import { createConnection } from '../utils/pagination';
 import { buildOrderByClause, OrderByClause } from '../utils/sorting';
 
@@ -618,31 +618,7 @@ export const analyticsResolvers = {
           });
         }
 
-      const query = `
-        SELECT DISTINCT ON (a.id)
-          a.asset_type, a.asset_code, a.asset_issuer, a.native,
-          am.volume_24h, am.volume_7d, am.volume_30d,
-          am.trades_24h, am.trades_7d, am.trades_30d,
-          am.price_change_24h, am.market_cap, am.holders
-        FROM assets a
-        LEFT JOIN LATERAL (
-          SELECT volume_24h, volume_7d, volume_30d, trades_24h, trades_7d, trades_30d,
-                 price_change_24h, market_cap, holders
-          FROM asset_metrics
-          WHERE asset_id = a.id
-          ORDER BY timestamp DESC
-          LIMIT 1
-        ) am ON TRUE
-        ${whereClause}
-        ORDER BY a.id
-        LIMIT $${paramIndex}
-      `;
-      params.push(first);
-
-      const assets = await db.query(query, params);
-
-      const result = assets.map(asset => ({
-        asset: {
+        return {
           assetType: asset.asset_type,
           assetCode: asset.asset_code,
           assetIssuer: asset.asset_issuer,

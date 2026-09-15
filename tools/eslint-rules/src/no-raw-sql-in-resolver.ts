@@ -34,7 +34,7 @@ const rule: Rule.RuleModule = {
       description:
         'Disallow raw SQL string literals passed directly to db.query() or db.queryOne() inside resolver files. Extract SQL into database query helpers instead.',
       recommended: true,
-      url: 'https://github.com/your-org/stellar-analytics-dashboard/blob/main/docs/static-analysis.md',
+      url: 'https://github.com/barracudadev/Stroop/blob/main/docs/static-analysis.md',
     },
     messages: {
       rawSqlInResolver:
